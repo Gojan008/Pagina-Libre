@@ -1,18 +1,18 @@
-/*Variables de color*/
+
 :root {
     --fondo: #6b6b6b4d;
-    --fondoTransparente: rgba(201, 201, 201, 0.5);
-    --rosa: #19305aee;
-    --rosaTransparente: rgba(131, 131, 131, 0.8);
-    --lila: #000000;
-    --lilaTransparente: rgba(0, 0, 0, 0.9);
-    --verde: #5f6aff;
+    --fondoTransparente: rgba(82, 165, 56, 0.5);
+    --azul: #19305aee;
+    --azulTransparente: rgba(172, 202, 35, 0.8);
+    --negro: #000000;
+    --negroTransparente: rgba(0, 0, 0, 0.9);
+    --azul: #5f6aff;
     --texto: #4a4a4a;
     --blanco: #ffffff;
-    --blancoTransparente: rgba(255, 255, 255, 0.836);
+    --blancoTransparente: rgba(39, 125, 165, 0.836);
     --sombra: rgba(0, 0, 0, 0.527);
 
-    --verde-oscuro: #0f145c;
+    --azul-oscuro: #2abba8;
     --negro-transparente-suave: rgba(0, 0, 0, 0.2);
     --negro-transparente-medio: rgba(0, 0, 0, 0.1);
     --negro-transparente-bajo: rgba(0, 0, 0, 0.05);
@@ -20,11 +20,9 @@
     --gradient-seccion-extra-b: rgba(181, 123, 255, 0.1);
     --ubicacion-fondo: rgba(255, 255, 255, 0.1);
     --ubicacion-texto-bg: rgba(0, 4, 255, 0.08);
-    --verde-shadow: rgba(2, 4, 92, 0.4);
-    --verde-shadow-hover: rgba(0, 47, 255, 0.6);
+    --azul-shadow: rgba(2, 4, 92, 0.4);
+    --azul-shadow-hover: rgba(0, 47, 255, 0.6);
 }
-
-/*Estilos generales*/
 
 * {
     box-sizing: border-box;
@@ -38,8 +36,6 @@ body {
     overflow-x: hidden;
     font-family: "Quicksand", sans-serif;
 }
-
-/*Menu de navegación*/
 
 .menu-principal {
     background: var(--blancoTransparente);
@@ -63,7 +59,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--rosa);
+    color: var(--azul);
     font-weight: 600;
     font-size: 1.3rem;
     transition: color 0.3 ease;
@@ -75,7 +71,7 @@ body {
 }
 
 .logo a:hover {
-    color: var(--lila);
+    color: var(--negro);
 }
 
 .navegacion {
@@ -95,7 +91,7 @@ body {
 }
 
 .navegacion a:hover {
-    color: var(--rosa);
+    color:var(--azul-oscuro);
 }
 
 .navegacion a::after {
@@ -105,7 +101,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var(--rosa), var(--lila));
+    background: linear-gradient(90deg, var(--azul), var(--negro));
     transition: width 0.5s ease;
 }
 
@@ -113,7 +109,7 @@ body {
     width: 100%;
 }
 
-.menu-hamburguesa {
+.menu-h {
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -122,13 +118,11 @@ body {
 .menu-hamburguesa span {
     width: 25px;
     height: 3px;
-    background: var(--rosa);
+    background: var(--azul);
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 2px;
 }
-
-/*Menú Responsive*/
 
 @media (max-width: 768px) {
     .menu-hamburguesa {
@@ -147,7 +141,7 @@ body {
         padding-top: 40px;
         gap: 20px;
         transition: right 0.5s ease;
-        box-shadow: -5px 0 15px var(--negro-transparente-medio);
+        box-shadow: -5px 0 15px var(--sombra);
     }
 
     .navegacion.activo {
@@ -156,10 +150,9 @@ body {
 
     .navegacion a {
         font-size: 1.2rem;
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
-    /*Animación del menú hamburguesa*/
     .menu-hamburguesa.activo span:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -173,13 +166,11 @@ body {
     }
 }
 
-/*Header*/
-
 header {
     text-align: center;
     padding: 60px 20px;
     background:
-    linear-gradient(to top, var(--lilaTransparente), var(--rosaTransparente)),
+    linear-gradient(to top, var(--negroTransparente), var(--azulTransparente)),
     url('../Img/banner.jpg');
 
     background-size: 100%;
@@ -228,7 +219,6 @@ header p {
     animation: fadeInUp 1s ease 0.2s backwards;
 }
 
-/*Contenido Principal*/
 
 .contenido {
     max-width: 1100px;
@@ -247,10 +237,8 @@ header p {
     font-family: "Quicksand", sans-serif;
 }
 
-/*Botón Principal*/
-
 .btn-principal {
-    background: linear-gradient(135deg, var(--verde), var(--verde-oscuro));
+    background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
     color: var(--blanco);
     border: none;
     padding: 15px 35px;
@@ -259,20 +247,18 @@ header p {
     font-size: 1.1rem;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    box-shadow: 0 6px 20px var(--verde-shadow);
+    box-shadow: 0 6px 20px var(--azul-shadow);
     transition: all 0.3s ease;
 }
 
 .btn-principal:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px var(--verde-shadow-hover);
+    box-shadow: 0 10px 30px var(--azul-shadow-hover);
 }
 
 .btn-principal:active {
     transform: translateY(-1px);
 }
-
-/*Tarjetas*/
 
 .cards {
     display: grid;
@@ -299,7 +285,7 @@ header p {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--rosa), var(--lila));
+    background: linear-gradient(90deg, var(--azul), var(--negro));
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -329,7 +315,7 @@ header p {
 }
 
 .card h3 {
-    color: var(--rosa);
+    color: var(--azul);
     margin: 0 0 15px 0;
     font-size: 1.5rem;
     font-family: "Gloria Hallelujah", cursive;
@@ -345,8 +331,8 @@ header p {
 
 .card-btn {
     background: transparent;
-    color: var(--rosa);
-    border: 2px solid var(--rosa);
+    color: var(--azul);
+    border: 2px solid var(--azul);
     padding: 10px 20px;
     border-radius: 25px;
     cursor: pointer;
@@ -358,12 +344,10 @@ header p {
 }
 
 .card-btn:hover {
-    background: var(--rosa);
+    background: var(--azul);
     color: var(--blanco);
     transform: scale(1.05);
 }
-
-/*Sección Extra*/
 
 .section-extra {
     background: linear-gradient(135deg, var(--gradient-seccion-extra-a), var(--gradient-seccion-extra-b));
@@ -376,7 +360,7 @@ header p {
 }
 
 .section-extra h2 {
-    color: var(--rosa);
+    color: var(--azul);
     font-size: 2rem;
     margin-bottom: 20px;
     font-family: "Gloria Hallelujah", cursive;
@@ -387,7 +371,7 @@ header p {
     padding: 20px 30px;
     border-radius: 15px;
     margin: 20px 20px;
-    border-left: 5px solid var(--verde);
+    border-left: 5px solid var(--azul);
     text-align: left;
     transition: transform 0.3s ease;
 }
@@ -397,10 +381,8 @@ header p {
 }
 
 .dato-curioso strong {
-    color: var(--rosa);
+    color: var(--azul);
 }
-
-/*Ubicación*/
 
 .ubicacion {
     max-width: 1000px;
@@ -413,7 +395,7 @@ header p {
 }
 
 .ubicacion h2 {
-    color: var(--rosa);
+    color: blue;
     font-size: 2rem;
     margin-bottom: 20px;
     font-family: "Gloria Hallelujah", cursive;
@@ -432,7 +414,7 @@ header p {
     margin: 0;
     text-align: center;
     background: var(--ubicacion-texto-bg);
-    border-left: 6px solid var(--rosa);
+    border-left: 6px solid var(--azul);
     padding: 60px 30px;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -463,15 +445,13 @@ header p {
     color: var(--texto);
 }
 
-/*Footer*/
-
 footer {
     margin-top: 80px;
-    background: linear-gradient(135deg, var(--rosa), var(--lila));
+    background: linear-gradient(135deg, var(--azul), var(--negro));
     color: var(--blanco);
     text-align: center;
     padding: 30px 20px;
-    font-size: 1rem;
+    font-size: 3rem;
     box-shadow: 0 0 20px var(--sombra);
 }
 
@@ -486,22 +466,19 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--rosa);
+    color: var(--azul);
 }
-
-/*Responsive General*/
 
 @media (max-width: 768px) {
 
-  /* --- HEADER --- */
   header {
     padding: 40px 15px;
-    background-size: cover; /* Cambiado de contain a cover */
+    background-size: cover; 
   }
 
-  header h1 { /* Corregido el selector */
-    font-size: 2.5rem; /* Aumentado de 0.5rem */
-    width: 90%;
+  header h1 {
+    font-size: 2.5rem; 
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -511,7 +488,6 @@ footer a:hover {
     margin: 10px auto 0;
   }
 
-  /* --- CONTENIDO GENERAL --- */
   .contenido {
     padding: 15px;
     margin: 40px auto;
@@ -522,15 +498,14 @@ footer a:hover {
     line-height: 1.6;
   }
 
-  /* --- CARDS --- */
     .cards {
   grid-template-columns: 1fr !important;
   gap: 25px;
-  padding: 0 10px; /* Agregado para márgenes laterales */
+  padding: 0 10px; 
     }
 
     .card {
-        margin: 0 10px; /* Agregado para márgenes laterales */
+        margin: 0 10px; 
         border-radius: 15px;
     }
     
@@ -546,7 +521,6 @@ footer a:hover {
       font-size: 0.95rem;
     }
     
-    /* --- SECCIÓN EXTRA --- */
     .seccion-extra {
       padding: 35px 15px;
       margin: 50px 15px;
@@ -561,11 +535,11 @@ footer a:hover {
       padding: 18px 20px;
     }
     
-    /* --- UBICACIÓN --- */
     .ubicacion {
       padding: 30px 15px;
       border-radius: 20px;
       margin: 60px 15px;
+      border-color: brown;
     }
     
     .ubicacion h2 {
@@ -588,14 +562,13 @@ footer a:hover {
       max-width: 100%;
       height: 280px;
     }
-    
-    /* --- BOTÓN PRINCIPAL --- */
+
     .btn-principal {
       padding: 12px 28px;
       font-size: 1rem;
     }
     
-    /* --- FOOTER --- */
+
     footer {
       padding: 25px 15px;
       font-size: 0.9rem;
